@@ -1,0 +1,486 @@
+/* Reset default styles */
+* {
+    font-family:sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    overflow-x: hidden;
+  }
+  
+  /* Styles for top bar */
+  .top-bar {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: none; /* Red background */
+    color:black;
+    padding: 10px 20px;
+    z-index: 1000;
+    transition: top 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .top-bar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Max width for better appearance on large screens */
+  }
+  
+  .left-links a {
+    color: black;
+    text-decoration: none;
+    margin-left: 0;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .right-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .right-links a {
+    color:black;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .right-links a:first-child {
+    margin-left: 0;
+  }
+  
+  .top-bar a:hover {
+    color: #ffcccb; /* Lighter color on hover */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .top-bar-inner {
+      flex-direction: column;
+    }
+  
+    .right-links {
+      margin-top: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .right-links a {
+      margin: 5px;
+    }
+  }
+  
+  /* Basic styles */
+#first-content {
+    font-size: 50px;
+    margin-top:100px;
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  
+  #second-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  
+  #second-content h1 {
+    font-size:80px;
+    margin-left:40px;
+  }
+  
+  #third-content {
+    margin-top: 40px;
+  }
+  
+  #fy {
+    margin-top: 20px;
+    margin-bottom:20px;
+    font-size:90px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    #first-content {
+      font-size: 35px;
+      margin-top: 50px;
+    }
+  
+    #second-content h1 {
+      font-size: 45px;
+    }
+  
+    #fy {
+      font-size: 45px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    #first-content {
+      font-size: 30px;
+      margin-top: 30px;
+    }
+  
+    #second-content {
+      margin-top: 30px;
+    }
+  
+    #second-content h1 {
+      font-size: 35px;
+    }
+  
+    #third-content {
+      margin-top:40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  
+    #fy {
+      font-size: 35px;
+    }
+  }
+  
+  /* Styles for video container */
+
+  
+  /* Responsive design */
+  #im{
+     object-fit: cover;
+      width:80%;
+      max-width:80%;
+      height: auto;
+      display:block;
+      align-self: center;
+      margin-left:50px;
+      
+
+  }
+  
+#forth-content{
+    margin-top:40px;
+    margin-bottom:50px;
+}
+  #forth-content p, h2{
+    margin-left: 30px;
+     margin-top: 80px;
+     font-size: 40px;
+  }
+
+
+#forth-content a{
+    text-decoration: none;
+}
+
+  /* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container for the row of images */
+  .image-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Container for each image and its subtext */
+  .image-container {
+    text-align: center;
+    margin: 10px;
+  }
+  
+  /* Styling for the images */
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for the subtext */
+  .image-container p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .image-row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .image-container {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+
+
+ /* Basic styles */
+.filth-content {
+    margin-top:70px;
+    width: 80%;
+    margin: 0 auto; /* Center the content */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+  }
+  
+  .filth-content div {
+    margin: 20px; /* Adjust as needed for spacing */
+    flex: 1 1 30%; /* Flex properties for responsive layout */
+    text-align: center;
+    width: 400px;
+    margin-left:100px;
+  }
+  
+  .filth-content img {
+    width: 100%;
+    height: auto;
+    max-width: 380px; /* Adjust max width as needed */
+  }
+  
+  .filth-content p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .filth-content div {
+      flex: 1 1 45%; /* Two items per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .filth-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .filth-content div {
+      flex: 1 1 100%; /* One item per row on extra small screens */
+      margin: 10px 0;
+    }
+  }
+  
+  #marquee span{
+    margin: 30px;
+      }
+    
+      #marquee{
+        width:100%;
+      }
+
+      #sixth-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 90vh;
+        background: #000;
+        color: white;
+        padding: 20px; /* Optional: Add padding for better spacing on smaller screens */
+        box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+      }
+      
+      #sixth-content .h3 {
+        margin-left: 60px;
+        width: 600px;
+        text-align: center; /* Center text */
+      }
+      
+      /* Responsive design */
+      @media (max-width: 992px) {
+        #sixth-content .h3 {
+          width: 80%;
+          margin-left: 30px; /* Adjust margin for better spacing */
+        }
+      }
+      
+      @media (max-width: 768px) {
+        #sixth-content {
+          flex-direction: column; /* Stack items vertically */
+          justify-content: flex-start; /* Align items to the top */
+        }
+      
+        #sixth-content .h3 {
+          width: 90%;
+          margin-left: 0; /* Reset margin */
+          margin-top: 20px; /* Add top margin for spacing */
+        }
+      }
+      
+      @media (max-width: 576px) {
+        #sixth-content .h3 {
+          width: 100%;
+          margin-left: 0; /* Reset margin */
+          margin-top: 15px; /* Add top margin for spacing */
+        }
+      }
+      
+      /* Basic styles */
+.shopify-content {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    
+  }
+  
+  .shopify-content .image-content {
+    flex: 1;
+  }
+  
+  .shopify-content .img3 {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+  
+  .shopify-content .text-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px; /* Optional: Add padding for better spacing */
+  }
+  
+  .shopify-content h1 {
+    font-size:50px;
+    margin: 0; /* Remove default margin */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 992px) {
+    .shopify-content {
+      flex-direction: column;
+    }
+  
+    .shopify-content .text-content {
+      padding: 20px; /* Optional: Adjust padding for better spacing */
+    }
+  
+    .shopify-content h1 {
+      font-size: 60px;
+    }
+  
+    .shopify-content .img3 {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .shopify-content h1 {
+      font-size: 50px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .shopify-content h1 {
+      font-size: 40px;
+    }
+  }
+  
+  #h1 {
+    margin: 30px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 40px;
+    text-align: center; /* Optional: Center the text */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 992px) {
+    #h1 {
+      font-size: 35px;
+      margin: 20px auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #h1 {
+      font-size: 30px;
+      margin: 15px auto;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    #h1 {
+      font-size: 25px;
+      margin: 10px auto;
+    }
+  }
+  
+  .last-content{
+    border-top:1px solid black;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top:40px;
+  }
+
+  .last-content .infor1{
+margin-left: 30px;
+  }
+
+
+
+      /* Basic styles */
+.right-side {
+    margin-left:90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start of the container */
+  }
+  
+  .right-side p {
+    margin: 10px 0; /* Add some space between the paragraphs */
+  }
+  
+  .right-side a {
+    margin-left:80px ;
+    font-size: 30px;
+    color: #333; /* Dark text color */
+    text-decoration: underline; /* Underline the text */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .right-side a:hover {
+    color: #000; /* Darker color on hover */
+  }
+  
+  .last-infor a{
+margin-left: 20px;
+text-decoration: none;
+color:black;
+  }
