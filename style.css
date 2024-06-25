@@ -8,8 +8,8 @@
 
   body{
     overflow-x: hidden;
-    margin-left:40px ;
-    margin-right:40px;
+    margin-left:45px ;
+    margin-right:45px;
     background-color: whitesmoke;
   }
   
@@ -218,7 +218,7 @@
 }
 
 .image-container {
-  height:auto;
+  height: auto;
   min-width: 250px; /* Adjust the minimum width as needed */
   max-width: 500px; /* Adjust the maximum width as needed */
   text-align: center;
@@ -226,28 +226,33 @@
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  margin: 10px auto; /* Center the container and add margin */
 }
 
 .image-container img {
-  width:60vh;
-  min-height:350px;
+  width: 100%; /* Ensures the image fills the container's width */
+  min-height: 350px;
   max-height: 400px; /* Adjust the maximum height as needed */
   object-fit: cover;
   border-radius: 8px;
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .image-container {
-      flex: 1 1 45%; /* Two images per row */
+    min-width: 200px; /* Adjust the minimum width for medium screens */
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .image-container {
-      flex: 1 1 100%; /* One image per row */
+    min-width: 100%; /* Adjust the minimum width for small screens */
+    max-width: 100%; /* Adjust the maximum width for small screens */
   }
 }
+
+
+/* Responsive Styles */
 
 
 
@@ -331,57 +336,76 @@
 
 
  /* Basic styles */
-.filth-content {
+ .filth-content {
   background-color: aliceblue;
-    margin-top:70px;
-    width:100%;
-    min-height:80vh;
-    margin: 0 auto; /* Center the content */
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap; /* Wrap items on smaller screens */
-  }
-  
+  margin-top: 70px;
+  width: 100%;
+  min-height: 80vh;
+  margin: 0 auto; /* Center the content */
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+.filth-content div {
+  font-size: 40px;
+  margin-top: 20px; /* Adjust as needed for spacing */
+  text-align: center;
+  width: 500px;
+  margin-left: 400px;
+  justify-self: end;
+}
+
+/* Responsive design for .filth-content div */
+@media (max-width: 1024px) {
   .filth-content div {
-    font-size:40px;
-    margin-top:20px; /* Adjust as needed for spacing */
- /* Flex properties for responsive layout */
-    text-align: center;
-    width: 500px;
-    margin-left:400px;
-    justify-self:end;
+    width: 100%;
+    margin-left: 0;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .filth-content div {
+    flex: 1 1 100%; /* One item per row on smaller screens */
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Responsive design for .filth-content img */
+.filth-content img {
+  width: 100%;
+  height: auto;
+  max-width: 380px; /* Adjust max width as needed */
+}
+
+@media (max-width: 1024px) {
   .filth-content img {
-    width:30vh;
-    height:50vh;
-    max-width: 380px; /* Adjust max width as needed */
+    width: 100%;
+    max-width: none;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .filth-content img {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Responsive design for .filth-content p */
+.filth-content p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
   .filth-content p {
-    margin-top: 10px;
-    font-size: 16px;
+    font-size: 14px;
   }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .filth-content div {
-      flex: 1 1 45%; /* Two items per row on smaller screens */
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .filth-content {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .filth-content div {
-      flex: 1 1 100%; /* One item per row on extra small screens */
-      margin: 10px 0;
-    }
-  }
+}
+
   
   #marquee span{
     margin: 30px;
