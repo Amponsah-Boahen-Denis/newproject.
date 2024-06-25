@@ -8,6 +8,9 @@
 
   body{
     overflow-x: hidden;
+    margin-left:45px ;
+    margin-right:45px;
+    background-color: whitesmoke;
   }
   
   /* Styles for top bar */
@@ -84,8 +87,12 @@
   
   /* Basic styles */
 #first-content {
+  display:flex ;
+  align-items: center;
+  justify-content:start;
+  height:25vh;
     font-size: 50px;
-    margin-top:100px;
+    margin-top:60px;
     width: 100%;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
@@ -95,6 +102,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    height:25vh;
     margin-top: 40px;
     width: 100%;
     border-top: 1px solid black;
@@ -103,6 +112,7 @@
   
   #second-content h1 {
     font-size:80px;
+    width: 120px;
     margin-left:40px;
   }
   
@@ -198,69 +208,153 @@
   }
   
   /* Container for the row of images */
-  .image-row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  /* Container for each image and its subtext */
+  /* General Styles */
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px; /* Adjust the gap between images as needed */
+  padding: 20px; /* Adjust padding around the image row as needed */
+}
+
+.image-container {
+  flex: 1;
+  min-width: 250px; /* Adjust the minimum width as needed */
+  max-width: 300px; /* Adjust the maximum width as needed */
+  text-align: center;
+  background-color: #f8f8f8; /* Adjust the background color as needed */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.image-container img {
+  width:60vh;
+  height:70vh;
+   /* Adjust the maximum height as needed */
+  object-fit: cover;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .image-container {
-    text-align: center;
-    margin: 10px;
+      flex: 1 1 45%; /* Two images per row */
   }
-  
-  /* Styling for the images */
-  .image-container img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  .image-container {
+      flex: 1 1 100%; /* One image per row */
   }
-  
-  /* Styling for the subtext */
-  .image-container p {
-    font-size: 16px;
-    color: #333;
+}
+
+
+
+
+
+
+/* General Styles */
+
+.image-row2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px; /* Adjust the gap between images as needed */
+  padding: 20px; /* Adjust padding around the image row as needed */
+}
+
+.image-container2 {
+  flex: 1;
+  min-width: 250px; /* Adjust the minimum width as needed */
+  max-width: 300px; /* Adjust the maximum width as needed */
+  text-align: center;
+  background-color: #f8f8f8; /* Adjust the background color as needed */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* General Styles */
+
+
+.responsive-image {
+  display: block; /* Ensures the image is displayed as a block element */
+  margin: 40px auto; /* Centers the image horizontally with a 40px margin */
+  max-width: 100%; /* Ensures the image does not exceed the container width */
+  min-width: 90%; /* Ensures the image is at least 90% of the container width */
+  max-height: 170vh; /* Ensures the image does not exceed 170% of the viewport height */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow for better visual appearance */
+  border-radius: 8px; /* Optional: Rounds the corners of the image */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .responsive-image {
+      min-width: 100%; /* Adjusts the minimum width for smaller screens */
+      max-height: 100vh; /* Adjusts the maximum height for smaller screens */
   }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .image-row {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .image-container {
-      width: 100%;
-      max-width: 300px;
-    }
+}
+
+@media (max-width: 480px) {
+  .responsive-image {
+      min-width: 100%; /* Ensures the image fits well on very small screens */
+      max-height: 100vh; /* Adjusts the maximum height for very small screens */
   }
+}
+
+
+
+
+
+.image-container2 img {
+  width:90vh;
+  height:70vh;
+  max-height:auto; /* Adjust the maximum height as needed */
+  object-fit: cover;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .image-container2 {
+      flex: 1 1 45%; /* Two images per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container2 {
+      flex: 1 1 100%; /* One image per row */
+  }
+}
+
 
 
 
  /* Basic styles */
 .filth-content {
+  background-color: aliceblue;
     margin-top:70px;
-    width: 80%;
+    width:100%;
+    min-height:100vh;
     margin: 0 auto; /* Center the content */
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap; /* Wrap items on smaller screens */
   }
   
   .filth-content div {
     margin: 20px; /* Adjust as needed for spacing */
-    flex: 1 1 30%; /* Flex properties for responsive layout */
+ /* Flex properties for responsive layout */
     text-align: center;
-    width: 400px;
-    margin-left:100px;
+    width: 350px;
+    margin-left:500px;
+    justify-self:end;
   }
   
   .filth-content img {
-    width: 100%;
-    height: auto;
+    width:30vh;
+    height:50vh;
     max-width: 380px; /* Adjust max width as needed */
   }
   
@@ -346,9 +440,11 @@
       
       /* Basic styles */
 .shopify-content {
-    margin-top: 30px;
+  height:90vh;
+    margin-top: 50px;
     width: 100%;
     display: flex;
+    align-items: center;
     flex-direction: row;
 
     
@@ -360,7 +456,7 @@
   
   .shopify-content .img3 {
     width: 100%;
-    height: 70%;
+    height:90%;
     object-fit: cover;
   }
   
@@ -390,6 +486,7 @@
   
     .shopify-content h1 {
       font-size: 60px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
   
     .shopify-content .img3 {
@@ -411,11 +508,12 @@
   }
   
   #h1 {
+    margin-top:400px;
     margin: 30px;
-    width: 100%;
-    max-width: 300px;
+    width: 40%;
     font-size: 40px;
     text-align: center; /* Optional: Center the text */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
   /* Responsive design */
@@ -441,12 +539,16 @@
   }
   
   .last-content{
+    height: auto;
     border-top:1px solid black;
     background-color: whitesmoke;
     display: flex;
     flex-direction: row;
+    justify-content:start;
+    align-items: center;
     flex-wrap: wrap;
     margin-top:40px;
+    height:80vh;
   }
 
   .last-content .infor1{
@@ -454,10 +556,12 @@ margin-left: 30px;
   }
 
 
-
+.infor1 p{
+  margin-top: 20px;
+}
       /* Basic styles */
 .right-side {
-    margin-left:90px;
+    margin-left:230px;
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align items to the start of the container */
@@ -479,8 +583,49 @@ margin-left: 30px;
     color: #000; /* Darker color on hover */
   }
   
+
   .last-infor a{
-margin-left: 20px;
-text-decoration: none;
-color:black;
+    margin-top: 30px;
+    margin-left: 20px;
+    text-decoration: none;
+    color:black;
   }
+
+.last-infor{
+  margin-top:70px;
+}
+
+  /* General Styles */
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Header Styles */
+header {
+  margin-top:90px;
+  position: relative;
+  text-align: center;
+}
+
+.header-image {
+  margin-top:20px;
+  width:40%;
+  height:10vh;
+}
+
+
+/* Footer Styles */
+footer {
+  margin-top:360px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.footer-image {
+  width: 40%;
+  height:10vh;
+}
+
