@@ -1,6 +1,6 @@
 // JavaScript to handle scrolling behavior
 let lastScrollTop = 0;
-const topBar = document.getElementById('topBar');
+const topBar = document.querySelector('.top-bar');
 
 window.addEventListener('scroll', function() {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
